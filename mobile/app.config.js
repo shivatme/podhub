@@ -29,14 +29,20 @@ export default {
         foregroundImage: "./assets/adaptive-icon.png",
         backgroundColor: "#ffffff",
       },
+      googleServicesFile: "./google-services.json",
       package: getUniqueIdentifier(),
     },
     web: {
       favicon: "./assets/favicon.png",
     },
     plugins: [
+      "@livekit/react-native-expo-plugin",
+      "@config-plugins/react-native-webrtc",
       "expo-build-properties",
       "expo-secure-store",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/messaging",
       "expo-secure-store",
       [
         "expo-build-properties",
@@ -90,5 +96,5 @@ function getUniqueIdentifier() {
   if (IS_PROD) {
     return "com.astch.podhub";
   }
-  return "com.astch.podhub";
+  return "com.astch.podhub.dev";
 }

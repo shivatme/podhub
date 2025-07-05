@@ -6,6 +6,7 @@ node_modules/
 # Expo
 .expo/
 dist/
+android/
 web-build/
 expo-env.d.ts
 
@@ -34,3 +35,9 @@ yarn-error.*
 
 # typescript
 *.tsbuildinfo
+
+# Credentials
+credentials.json
+google-services.json
+google-service.json
+credentials/
